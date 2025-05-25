@@ -3,6 +3,7 @@
 
 body {
     background-color: rgb(33, 37, 41);
+    color: white;
 
 }
 
@@ -17,12 +18,12 @@ body {
 }
 
 section {
-    border: solid 2px rgb(189, 238, 27);
+   
     display: flex;
 }
 
 #shows {
-    border: solid 2px red;
+  
     padding: 0 30px;
     font-size: 40px;
 }
@@ -39,4 +40,10 @@ section {
 
 
 
+}
+
+.dropdown-menu {
+    width: 200px;
+  height: 100px;
+  overflow: hidden;
 }

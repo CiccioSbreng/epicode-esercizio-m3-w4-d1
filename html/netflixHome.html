@@ -2,121 +2,182 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Netflix Home</title>
-    <link rel="stylesheet" href="/css/bootstrap.css">
-    <link rel="stylesheet" href="/css/myReset.css">
-    <link rel="stylesheet" href="/css/myCss.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Netflix Home</title>
+  <link rel="stylesheet" href="/css/bootstrap.css">
+  <link rel="stylesheet" href="/css/myReset.css">
+  <link rel="stylesheet" href="/css/myCss.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
 </head>
 
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg ">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#"><img class="logoImg" src="/assets/imgs/Netflix_Logo_RGB.png"
-                        style="width: 80px; height: 60px;"></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse d-flex justify-content-between">
-                    <ul class="navbar-nav align-items-center">
-                        <li class="nav-item"><a class="nav-link text-white" href="#">Home</a></li>
-                        <li class="nav-item"><a class="nav-link active text-white" href="#">TV Shows</a></li>
-                        <li class="nav-item"><a class="nav-link text-white" href="#">Movies</a></li>
-                        <li class="nav-item"><a class="nav-link text-white" href="#">Recently Added</a></li>
-                        <li class="nav-item"><a class="nav-link text-white" href="#">My List</a></li>
-                    </ul>
-                    <ul class="navbar-nav align-items-center">
-                        <li class="nav-item me-3"><i class="bi bi-search text-white"></i></li>
-                        <li class="nav-item me-3"><a class="nav-link text-white" href="#">KIDS</a></li>
-                        <li id="notify" class="nav-item me-3"><i class="bi bi-bell-fill text-white"></i></li>
-                        <li class="nav-item me-3"><img class="profileImg" src="/replace/profilo.png" alt=""></li>
-                        <li class="nav-item dropdown me-3">
-                            <a class="nav-link dropdown-toggle text-white" href="#" role="button"
-                                data-bs-toggle="dropdown"></a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item text-white" href="#">Action</a></li>
-                                <li><a class="dropdown-item text-white" href="#">Comedy</a></li>
-                                <li><a class="dropdown-item text-white" href="#">Drama</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
+  <header>
+    <!-- Navbar principale con Bootstrap -->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <!-- Logo Netflix -->
+        <a class="navbar-brand" href="#">
+          <img class="logoImg" src="/assets/imgs/Netflix_Logo_RGB.png" alt="Netflix Logo"
+            style="width: 80px; height: 60px;">
+        </a>
 
-<main>
-  <section id="shows" class=" align-items-center ">
-    <label for="genres" class="text-white ">TV Shows</label> 
-    <select id="genres" class="form-select bg-dark text-white w-auto ms-4">
-      <option selected>Genres</option>
-      <option value="1">Action</option>
-      <option value="2">Comedy</option>
-      <option value="3">Drama</option>
-      <option value="4">Horror</option>
-      <option value="5">Romance</option>
-    </select>
-  </section>
-</main>
+        <!-- Bottone per il menu mobile -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Contenitore della barra di navigazione -->
+        <div class="collapse navbar-collapse d-flex justify-content-between" id="navbarSupportedContent">
+
+          <!-- Menu principale con le sezioni -->
+          <ul class="navbar-nav align-items-center">
+            <li class="nav-item"><a class="nav-link text-white" href="#">Home</a></li>
+            <li class="nav-item"><a class="nav-link active text-white" href="#">TV Shows</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="#">Movies</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="#">Recently Added</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="#">My List</a></li>
+          </ul>
+
+          <!-- Sezione icone e profilo utente -->
+          <ul class="navbar-nav align-items-center">
+            <li class="nav-item me-3"><i class="bi bi-search text-white"></i></li> <!-- Icona ricerca -->
+            <li class="nav-item me-3"><a class="nav-link text-white" href="#">KIDS</a></li> <!-- Sezione per bambini -->
+            <li id="notify" class="nav-item me-3"><i class="bi bi-bell-fill text-white"></i></li>
+            <!-- Icona notifiche -->
+
+            <!-- Immagine profilo utente -->
+            <li class="nav-item me-3">
+              <img class="profileImg" src="/replace/profilo.png" alt="Profilo utente">
+            </li>
+
+            <!-- Menu a tendina per le impostazioni -->
+            <li class="nav-item dropdown me-3">
+              <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown"></a>
+              <ul class="dropdown-menu bg-dark">
+                <li><a class="dropdown-item text-white" href="#">Account</a></li>
+                <li><a class="dropdown-item text-white" href="#">Abbonamento</a></li>
+                <li><a class="dropdown-item text-white" href="#">Esci</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section id="shows" class="d-flex align-items-center">
+      <label for="genres" class="text-white me-3">TV Shows</label>
+      <select id="genres" class="form-select bg-dark text-white w-auto me-3">
+        <option selected>Genres</option>
+        <option value="1">Action</option>
+        <option value="2">Comedy</option>
+        <option value="3">Drama</option>
+        <option value="4">Horror</option>
+        <option value="5">Romance</option>
+      </select>
+
+    </section>
+  </main>
 
 
-    <!-- Sezione 1: Trending Now -->
-  <section class=" text-light py-5">
+
+  <!-- Sezione Trending Now -->
+  <section class="py-5">
     <div class="container-fluid">
       <!-- Titolo della Sezione -->
       <div class="mb-2">
         <h1 class="display-4">Trending Now</h1>
       </div>
+
       <!-- Carousel per Trending Now -->
       <div id="carouselTrending" class="carousel slide" data-bs-ride="carousel">
         <!-- Indicatori -->
         <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselTrending" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselTrending" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
           <button type="button" data-bs-target="#carouselTrending" data-bs-slide-to="1" aria-label="Slide 2"></button>
         </div>
+
         <!-- Contenuto del Carousel -->
         <div class="carousel-inner">
           <!-- Primo slide: 6 card -->
           <div class="carousel-item active">
-            <div class="row g-0">
+            <div class="row g-2">
               <div class="col-md-2">
                 <div class="card">
-                  <img src="/assets/imgs/movies/1.png" class="card-img-top" alt="Immagine 1">
+                  <img src="/assets/imgs/movies/1.png" class="d-block w-100 card-img-top" alt="Immagine 1">
                 </div>
               </div>
               <div class="col-md-2">
                 <div class="card">
-                  <img src="/assets/imgs/movies/2.png" class="card-img-top" alt="Immagine 2">
+                  <img src="/assets/imgs/movies/2.png" class="d-block w-100 card-img-top" alt="Immagine 2">
                 </div>
               </div>
               <div class="col-md-2">
                 <div class="card">
-                  <img src="/assets/imgs/movies/3.png" class="card-img-top" alt="Immagine 3">
+                  <img src="/assets/imgs/movies/3.png" class="d-block w-100 card-img-top" alt="Immagine 3">
                 </div>
               </div>
               <div class="col-md-2">
                 <div class="card">
-                  <img src="/assets/imgs/movies/4.png" class="card-img-top" alt="Immagine 4">
+                  <img src="/assets/imgs/movies/4.png" class="d-block w-100 card-img-top" alt="Immagine 4">
                 </div>
               </div>
               <div class="col-md-2">
                 <div class="card">
-                  <img src="/assets/imgs/movies/5.png" class="card-img-top" alt="Immagine 5">
+                  <img src="/assets/imgs/movies/5.png" class="d-block w-100 card-img-top" alt="Immagine 5">
                 </div>
               </div>
               <div class="col-md-2">
                 <div class="card">
-                  <img src="/assets/imgs/movies/6.png" class="card-img-top" alt="Immagine 6">
+                  <img src="/assets/imgs/movies/6.png" class="d-block w-100 card-img-top" alt="Immagine 6">
                 </div>
               </div>
             </div>
           </div>
-          <!-- Puoi aggiungere altri slide se necessario -->
+
+
+          <div class="carousel-item">
+            <div class="row g-2">
+              <div class="col-md-2">
+                <div class="card">
+                  <img src="/assets/imgs/movies/7.png" class="d-block w-100 card-img-top" alt="Immagine 7">
+                </div>
+              </div>
+              <div class="col-md-2">
+                <div class="card">
+                  <img src="/assets/imgs/movies/8.png" class="d-block w-100 card-img-top" alt="Immagine 8">
+                </div>
+              </div>
+              <div class="col-md-2">
+                <div class="card">
+                  <img src="/assets/imgs/movies/9.png" class="d-block w-100 card-img-top" alt="Immagine 9">
+                </div>
+              </div>
+              <div class="col-md-2">
+                <div class="card">
+                  <img src="/assets/imgs/movies/10.png" class="d-block w-100 card-img-top" alt="Immagine 10">
+                </div>
+              </div>
+              <div class="col-md-2">
+                <div class="card">
+                  <img src="/assets/imgs/movies/11.png" class="d-block w-100 card-img-top" alt="Immagine 11">
+                </div>
+              </div>
+              <div class="col-md-2">
+                <div class="card">
+                  <img src="/assets/imgs/movies/12.png" class="d-block w-100 card-img-top" alt="Immagine 12">
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+
         <!-- Controlli del Carousel -->
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselTrending" data-bs-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -129,183 +190,193 @@
       </div>
     </div>
   </section>
-
-  <!-- Sezione 2: Watch It Again -->
-  <section class="text-light ">
+  <!-- Sezione dedicata ai film già visti (Watch It Again) -->
+  <section class="py-5">
     <div class="container-fluid">
-      <!-- Titolo della Sezione -->
-      <div class="mb-2 ">
+      <!-- Titolo della sezione -->
+      <div class="mb-2">
         <h1 class="display-4">Watch It Again</h1>
       </div>
-      <!-- Carousel per Watch It Again -->
+
+      <!-- Creazione del carosello con Bootstrap -->
       <div id="carouselWatch" class="carousel slide" data-bs-ride="carousel">
-        <!-- Indicatori -->
+
+        <!-- Indicatori di posizione del carosello -->
         <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselWatch" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselWatch" data-bs-slide-to="0" class="active"
+            aria-label="Slide 1"></button>
           <button type="button" data-bs-target="#carouselWatch" data-bs-slide-to="1" aria-label="Slide 2"></button>
         </div>
-        <!-- Contenuto del Carousel -->
+
+        <!-- Contenuto del carosello -->
         <div class="carousel-inner">
-          <!-- Primo slide: 6 card -->
+          <!-- Primo slide -->
           <div class="carousel-item active">
-            <div class="row g-0">
-              <div class="col-md-2">
-                <div class="card">
-                  <img src="/assets/imgs/movies/7.png" class="card-img-top" alt="Immagine 7">
-                </div>
-              </div>
-              <div class="col-md-2">
-                <div class="card">
-                  <img src="/assets/imgs/movies/8.png" class="card-img-top" alt="Immagine 8">
-                </div>
-              </div>
-              <div class="col-md-2">
-                <div class="card">
-                  <img src="/assets/imgs/movies/9.png" class="card-img-top" alt="Immagine 9">
-                </div>
-              </div>
-              <div class="col-md-2">
-                <div class="card">
-                  <img src="/assets/imgs/movies/10.png" class="card-img-top" alt="Immagine 10">
-                </div>
-              </div>
-              <div class="col-md-2">
-                <div class="card">
-                  <img src="/assets/imgs/movies/11.png" class="card-img-top" alt="Immagine 11">
-                </div>
-              </div>
-              <div class="col-md-2">
-                <div class="card">
-                  <img src="/assets/imgs/movies/12.png" class="card-img-top" alt="Immagine 12">
-                </div>
-              </div>
+            <div class="row g-2">
+              <!-- Ogni colonna contiene una card con un'immagine -->
+              <div class="col-md-2"><img src="/assets/imgs/movies/7.png" class="d-block w-100 card-img-top"
+                  alt="Immagine 7"></div>
+              <div class="col-md-2"><img src="/assets/imgs/movies/8.png" class="d-block w-100 card-img-top"
+                  alt="Immagine 8"></div>
+              <div class="col-md-2"><img src="/assets/imgs/movies/9.png" class="d-block w-100 card-img-top"
+                  alt="Immagine 9"></div>
+              <div class="col-md-2"><img src="/assets/imgs/movies/10.png" class="d-block w-100 card-img-top"
+                  alt="Immagine 10"></div>
+              <div class="col-md-2"><img src="/assets/imgs/movies/11.png" class="d-block w-100 card-img-top"
+                  alt="Immagine 11"></div>
+              <div class="col-md-2"><img src="/assets/imgs/movies/12.png" class="d-block w-100 card-img-top"
+                  alt="Immagine 12"></div>
             </div>
           </div>
-         
+
+          <!-- Secondo slide -->
+          <div class="carousel-item">
+            <div class="row g-2">
+              <div class="col-md-2"><img src="/assets/imgs/movies/1.png" class="d-block w-100 card-img-top"
+                  alt="Immagine 1"></div>
+              <div class="col-md-2"><img src="/assets/imgs/movies/2.png" class="d-block w-100 card-img-top"
+                  alt="Immagine 2"></div>
+              <div class="col-md-2"><img src="/assets/imgs/movies/3.png" class="d-block w-100 card-img-top"
+                  alt="Immagine 3"></div>
+              <div class="col-md-2"><img src="/assets/imgs/movies/4.png" class="d-block w-100 card-img-top"
+                  alt="Immagine 4"></div>
+              <div class="col-md-2"><img src="/assets/imgs/movies/5.png" class="d-block w-100 card-img-top"
+                  alt="Immagine 5"></div>
+              <div class="col-md-2"><img src="/assets/imgs/movies/6.png" class="d-block w-100 card-img-top"
+                  alt="Immagine 6"></div>
+            </div>
+          </div>
         </div>
-        <!-- Controlli del Carousel -->
+
+        <!-- Pulsanti di navigazione  -->
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselWatch" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Precedente</span>
+          <span class="carousel-control-prev-icon"></span>
         </button>
         <button class="carousel-control-next" type="button" data-bs-target="#carouselWatch" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Successivo</span>
+          <span class="carousel-control-next-icon"></span>
         </button>
       </div>
     </div>
   </section>
 
-  <!-- Sezione 3: New Releases -->
-  <section class="text-light py-5">
+
+  <!-- Sezione per i nuovi film appena usciti (New Releases) -->
+  <section class="py-5">
     <div class="container-fluid">
       <!-- Titolo della Sezione -->
       <div class="mb-2">
         <h1 class="display-4">New Releases</h1>
       </div>
-      <!-- Carousel per New Releases -->
+
+      <!-- Creazione del carosello per mostrare le nuove uscite -->
       <div id="carouselNew" class="carousel slide" data-bs-ride="carousel">
-        <!-- Indicatori -->
+
+        <!-- Indicatori per navigare tra le slide -->
         <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselNew" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselNew" data-bs-slide-to="0" class="active"
+            aria-label="Slide 1"></button>
           <button type="button" data-bs-target="#carouselNew" data-bs-slide-to="1" aria-label="Slide 2"></button>
         </div>
-        <!-- Contenuto del Carousel -->
+
+        <!-- Contenuto del carosello -->
         <div class="carousel-inner">
-          <!-- Primo slide: 6 card -->
+          <!-- Primo slide con 6 immagini -->
           <div class="carousel-item active">
-            <div class="row g-0">
-              <div class="col-md-2">
-                <div class="card">
-                  <img src="/assets/imgs/movies/13.png" class="card-img-top" alt="Immagine 13">
-                </div>
-              </div>
-              <div class="col-md-2">
-                <div class="card">
-                  <img src="/assets/imgs/movies/14.png" class="card-img-top" alt="Immagine 14">
-                </div>
-              </div>
-              <div class="col-md-2">
-                <div class="card">
-                  <img src="/assets/imgs/movies/15.png" class="card-img-top" alt="Immagine 15">
-                </div>
-              </div>
-              <div class="col-md-2">
-                <div class="card">
-                  <img src="/assets/imgs/movies/16.png" class="card-img-top" alt="Immagine 16">
-                </div>
-              </div>
-              <div class="col-md-2">
-                <div class="card">
-                  <img src="/assets/imgs/movies/17.png" class="card-img-top" alt="Immagine 17">
-                </div>
-              </div>
-              <div class="col-md-2">
-                <div class="card">
-                  <img src="/assets/imgs/movies/18.png" class="card-img-top" alt="Immagine 18">
-                </div>
-              </div>
+            <div class="row g-2">
+              <div class="col-md-2"><img src="/assets/imgs/movies/13.png" class="d-block w-100 card-img-top"
+                  alt="Immagine 13"></div>
+              <div class="col-md-2"><img src="/assets/imgs/movies/14.png" class="d-block w-100 card-img-top"
+                  alt="Immagine 14"></div>
+              <div class="col-md-2"><img src="/assets/imgs/movies/15.png" class="d-block w-100 card-img-top"
+                  alt="Immagine 15"></div>
+              <div class="col-md-2"><img src="/assets/imgs/movies/16.png" class="d-block w-100 card-img-top"
+                  alt="Immagine 16"></div>
+              <div class="col-md-2"><img src="/assets/imgs/movies/17.png" class="d-block w-100 card-img-top"
+                  alt="Immagine 17"></div>
+              <div class="col-md-2"><img src="/assets/imgs/movies/18.png" class="d-block w-100 card-img-top"
+                  alt="Immagine 18"></div>
             </div>
           </div>
-          <!-- Puoi aggiungere altri slide se necessario -->
+
+          <!-- Secondo slide  -->
+          <div class="carousel-item">
+            <div class="row g-2">
+              <div class="col-md-2"><img src="/assets/imgs/movies/7.png" class="d-block w-100 card-img-top"
+                  alt="Immagine 7"></div>
+              <div class="col-md-2"><img src="/assets/imgs/movies/8.png" class="d-block w-100 card-img-top"
+                  alt="Immagine 8"></div>
+              <div class="col-md-2"><img src="/assets/imgs/movies/9.png" class="d-block w-100 card-img-top"
+                  alt="Immagine 9"></div>
+              <div class="col-md-2"><img src="/assets/imgs/movies/10.png" class="d-block w-100 card-img-top"
+                  alt="Immagine 10"></div>
+              <div class="col-md-2"><img src="/assets/imgs/movies/11.png" class="d-block w-100 card-img-top"
+                  alt="Immagine 11"></div>
+              <div class="col-md-2"><img src="/assets/imgs/movies/12.png" class="d-block w-100 card-img-top"
+                  alt="Immagine 12"></div>
+            </div>
+          </div>
         </div>
-        <!-- Controlli del Carousel -->
+
+        <!-- Pulsanti di navigazione per scorrere tra le slide -->
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselNew" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Precedente</span>
+          <span class="carousel-control-prev-icon"></span>
         </button>
         <button class="carousel-control-next" type="button" data-bs-target="#carouselNew" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Successivo</span>
+          <span class="carousel-control-next-icon"></span>
         </button>
       </div>
+    </div>
+  </section>
 
-<footer class="py-4">
+  <footer class="py-4 bg-dark text-light mt-5 pt-5">
+
     <div class="container">
-      <div class="row">
-        <!-- Colonna 1 -->
-        <div class="col-6 col-md-3 mb-3">
-          <a href="#" class="d-block mb-2">Audio and Subtitles</a>
-          <a href="#" class="d-block mb-2">Media Center</a>
-          <a href="#" class="d-block mb-2">Privacy</a>
-          <a href="#" class="d-block mb-2">Contact Us</a>
-        </div>
-        <!-- Colonna 2 -->
-        <div class="col-6 col-md-3 mb-3">
-          <a href="#" class="d-block mb-2">Audio Deseription</a>
-          <a href="#" class="d-block mb-2">Investor Relations</a>
-          <a href="#" class="d-block mb-2">Legal Notices</a>
-          <a href="#" class="d-block mb-2">Help Center</a>
-        </div>
-        <!-- Colonna 3 -->
-        <div class="col-6 col-md-3 mb-3">
-          <a href="#" class="d-block mb-2">Jobs</a>
-          <a href="#" class="d-block mb-2">Cookie Preferences</a>
-          <a href="#" class="d-block mb-2">Gift Cards</a>
-        </div>
-        <!-- Colonna 4 -->
-        <div class="col-6 col-md-3 mb-3">
-          <a href="#" class="d-block mb-2">Terms of Use</a>
-          <a href="#" class="d-block mb-2">Corporate Information</a>
-          <a href="#" class="d-block mb-2">Service Code</a>
+      <!-- Sezione Social Icons sopra le colonne e allineata a sinistra -->
+      <div class="row mb-3">
+        <div class="col-12 text-start">
+          <a href="https://www.facebook.com" class="text-light mx-1"><i class="fab fa-facebook-f fa-lg"></i></a>
+          <a href="https://www.instagram.com" class="text-light mx-1"><i class="fab fa-instagram fa-lg"></i></a>
+          <a href="https://www.twitter.com" class="text-light mx-1"><i class="fab fa-twitter fa-lg"></i></a>
+          <a href="https://www.youtube.com" class="text-light mx-1"><i class="fab fa-youtube fa-lg"></i></a>
         </div>
       </div>
-      <!-- Riga finale: Copyright -->
-      <div class="row">
+
+      <!-- Colonne con link più vicine tra loro -->
+      <div class="row text-secondary small">
+        <div class="col-6 col-md-3">
+          <a href="#" class="d-block mb-1 text-decoration-none">Audio and Subtitles</a>
+          <a href="#" class="d-block mb-1 text-decoration-none">Media Center</a>
+          <a href="#" class="d-block mb-1 text-decoration-none">Privacy</a>
+          <a href="#" class="d-block mb-1 text-decoration-none">Contact Us</a>
+        </div>
+        <div class="col-6 col-md-3">
+          <a href="#" class="d-block mb-1 text-decoration-none">Audio Description</a>
+          <a href="#" class="d-block mb-1 text-decoration-none">Investor Relations</a>
+          <a href="#" class="d-block mb-1 text-decoration-none">Legal Notices</a>
+        </div>
+        <div class="col-6 col-md-3">
+          <a href="#" class="d-block mb-1 text-decoration-none">Help Center</a>
+          <a href="#" class="d-block mb-1 text-decoration-none">Jobs</a>
+          <a href="#" class="d-block mb-1 text-decoration-none">Cookie Preferences</a>
+        </div>
+        <div class="col-6 col-md-3">
+          <a href="#" class="d-block mb-1 text-decoration-none">Gift Cards</a>
+          <a href="#" class="d-block mb-1 text-decoration-none">Terms of Use</a>
+          <a href="#" class="d-block mb-1 text-decoration-none">Corporate Information</a>
+        </div>
+      </div>
+
+      <!-- Copyright -->
+      <div class="row mt-2">
         <div class="col text-center">
-          <small class="text-muted">o 1997-2019 Netflix, Inc. (-0d00fcda2fdt9cOde)</small>
+          <small class="text-secondary">© 1997-2025 Netflix, Inc.</small>
         </div>
       </div>
     </div>
   </footer>
 
-
-
-
-    </div>
-  </section>
-    <!-- Includi il bundle JS di Bootstrap (che comprende Popper) -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Includi il bundle JS di Bootstrap (che comprende Popper) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
